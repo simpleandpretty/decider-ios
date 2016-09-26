@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ObA-dk-sSI">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Messages View Controller-->
+        <scene sceneID="7MM-of-jgj">
+            <objects>
+                <viewController id="ObA-dk-sSI" customClass="MessagesViewController" customModule="MessagesExtension" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qkL-Od-lgU"/>
+                        <viewControllerLayoutGuide type="bottom" id="n38-gi-rB5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zMn-AG-sqS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="528"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="528"/>
+                    <connections>
+                        <outlet property="paperButton" destination="6lm-Hs-GD0" id="a7i-Ag-dVr"/>
+                        <outlet property="rockButton" destination="naM-IF-vsI" id="Hm5-OR-mrc"/>
+                        <outlet property="scissorButton" destination="DLG-e7-mRn" id="S5c-EC-2ve"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X47-rx-isc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116.8" y="123.23838080959521"/>
+        </scene>
+        <!--Fight Move View Controller-->
+        <scene sceneID="gKq-C6-gYz">
+            <objects>
+                <viewController storyboardIdentifier="FightMoveViewController" id="wkp-de-tAa" customClass="FightMoveViewController" customModule="MessagesExtension" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Zex-Pv-A64"/>
+                        <viewControllerLayoutGuide type="bottom" id="NQR-EX-0uT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Vwb-lc-Gtm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Tum-fD-Z6c">
+                                <subviews>
+                                    <view contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Wh3-x6-xuR" customClass="VideoPlayerView" customModule="MessagesExtension" customModuleProvider="target">
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" priority="250" constant="450.5" id="1J7-Mm-Hhk"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Select attack to start a fight!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zoj-N0-ggQ">
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" distribution="fillEqually" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="c8e-gw-StS">
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Yh6-VG-wtm">
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="naM-IF-vsI">
+                                                        <color key="backgroundColor" red="0.1058823529" green="0.56078431370000004" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="64"/>
+                                                        <state key="normal" title="👊"/>
+                                                        <connections>
+                                                            <action selector="sendAction:" destination="wkp-de-tAa" eventType="touchUpInside" id="vR5-iI-tQj"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ROCK!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fnD-Sc-ga3">
+                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="mgc-mX-Mxs"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7gW-Yf-mfm">
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DLG-e7-mRn">
+                                                        <color key="backgroundColor" red="0.1058823529" green="0.56078431370000004" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="64"/>
+                                                        <state key="normal" title="✌"/>
+                                                        <connections>
+                                                            <action selector="sendAction:" destination="wkp-de-tAa" eventType="primaryActionTriggered" id="U3S-3F-F5P"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SCISSOR!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fkI-HJ-6Wk">
+                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="8dp-HW-Iaw"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="137" id="3VR-qH-76Y"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="BiV-Dp-Js1">
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6lm-Hs-GD0">
+                                                        <color key="backgroundColor" red="0.1058823529" green="0.56078431370000004" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="64"/>
+                                                        <state key="normal" title="🖐"/>
+                                                        <connections>
+                                                            <action selector="sendAction:" destination="wkp-de-tAa" eventType="primaryActionTriggered" id="v7B-yd-7Xc"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PAPER!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TtY-FB-S1G">
+                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="bDR-tW-yfM"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Tum-fD-Z6c" firstAttribute="leading" secondItem="Vwb-lc-Gtm" secondAttribute="leadingMargin" id="FJN-p9-54L"/>
+                            <constraint firstItem="NQR-EX-0uT" firstAttribute="top" secondItem="Tum-fD-Z6c" secondAttribute="bottom" id="Ma6-Ks-393"/>
+                            <constraint firstItem="Tum-fD-Z6c" firstAttribute="top" secondItem="Zex-Pv-A64" secondAttribute="bottom" constant="5" id="iAq-I2-liR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Tum-fD-Z6c" secondAttribute="trailing" id="n0k-UT-J2a"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="messsageLabel" destination="Zoj-N0-ggQ" id="Mcx-q7-0WX"/>
+                        <outlet property="paperButton" destination="6lm-Hs-GD0" id="Om7-FK-Jea"/>
+                        <outlet property="rockButton" destination="naM-IF-vsI" id="XiS-Ce-D0u"/>
+                        <outlet property="scissorButton" destination="DLG-e7-mRn" id="27N-pv-Tmx"/>
+                        <outlet property="videoView" destination="Wh3-x6-xuR" id="QIY-Sk-evF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="joF-UN-HNX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="900" y="61"/>
+        </scene>
+        <!--Play Fight View Controller-->
+        <scene sceneID="gf5-dJ-YsZ">
+            <objects>
+                <viewController storyboardIdentifier="PlayFightViewController" id="O07-oy-0EN" customClass="PlayFightViewController" customModule="MessagesExtension" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VFv-36-gEi"/>
+                        <viewControllerLayoutGuide type="bottom" id="HxL-wN-2Oc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="V1b-FI-oSo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HAe-6K-E7b">
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fGH-sH-MiB" customClass="VideoPlayerView" customModule="MessagesExtension" customModuleProvider="target">
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="32v-hn-2AG">
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FIGHT REPLAY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sek-iF-vch">
+                                                <color key="backgroundColor" red="0.1058823529" green="0.56078431370000004" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                <color key="textColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👊" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aI2-Rw-BWk">
+                                                <color key="backgroundColor" red="0.1058823529" green="0.56078431370000004" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="64"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </label>
+                                            <stackView contentMode="scaleToFill" distribution="equalCentering" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="85G-4V-feH">
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fight On" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmF-3X-NtV">
+                                                        <color key="backgroundColor" red="0.1058823529" green="0.56078431370000004" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </label>
+                                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gdh-jt-gdU">
+                                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                        <state key="normal" title="Make it official!">
+                                                            <color key="titleColor" red="0.1058823529" green="0.56078431370000004" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="makeItOfficialAction:" destination="O07-oy-0EN" eventType="primaryActionTriggered" id="W2t-z9-Ymb"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.1058823529" green="0.56078431370000004" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.1058823529" green="0.56078431370000004" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1058823529" green="0.56078431370000004" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="HAe-6K-E7b" firstAttribute="leading" secondItem="V1b-FI-oSo" secondAttribute="leading" id="45Y-fL-Lrm"/>
+                            <constraint firstItem="HAe-6K-E7b" firstAttribute="bottomMargin" secondItem="V1b-FI-oSo" secondAttribute="bottom" constant="-40" id="6Ed-ML-eVR"/>
+                            <constraint firstAttribute="trailing" secondItem="HAe-6K-E7b" secondAttribute="trailing" id="Da6-SK-qoD"/>
+                            <constraint firstItem="HAe-6K-E7b" firstAttribute="top" secondItem="VFv-36-gEi" secondAttribute="bottom" id="gMe-io-cmc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="captionLabel" destination="dmF-3X-NtV" id="1QU-4x-NNR"/>
+                        <outlet property="emojiLabel" destination="aI2-Rw-BWk" id="fNg-q2-jxA"/>
+                        <outlet property="fightVideoView" destination="fGH-sH-MiB" id="0jS-ce-Nde"/>
+                        <outlet property="makeOfficialButton" destination="Gdh-jt-gdU" id="lEM-Q1-ozx"/>
+                        <outlet property="titleLabel" destination="Sek-iF-vch" id="bRp-9K-BfT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MCG-aX-qUJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="161" y="770"/>
+        </scene>
+    </scenes>
+</document>
